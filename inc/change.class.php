@@ -593,7 +593,19 @@ class Change extends CommonITILObject {
     * @return array
    **/
    static function getNewStatusArray() {
-      return [self::INCOMING, self::ACCEPTED, self::EVALUATION, self::APPROVAL];
+      $tab = [self::INCOMING, 
+            self::ASSIGNED, 
+            self::PLANNED, 
+            self::WAITING, 
+            self::SOLVED, 
+            self::CLOSED, 
+            self::ACCEPTED, 
+            self::OBSERVED, 
+            self::EVALUATION, 
+            self::APPROVAL, 
+            self::TEST, 
+            self::QUALIFICATION];
+      return $tab;
    }
 
    /**
@@ -607,7 +619,18 @@ class Change extends CommonITILObject {
    static function getProcessStatusArray() {
 
       // To be overridden by class
-      $tab = [self::ACCEPTED, self::QUALIFICATION, self::TEST];
+      $tab = [self::INCOMING, 
+            self::ASSIGNED, 
+            self::PLANNED, 
+            self::WAITING, 
+            self::SOLVED, 
+            self::CLOSED, 
+            self::ACCEPTED, 
+            self::OBSERVED, 
+            self::EVALUATION, 
+            self::APPROVAL, 
+            self::TEST, 
+            self::QUALIFICATION];
       return $tab;
    }
 
